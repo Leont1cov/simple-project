@@ -1,0 +1,143 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.topSection {
+  border-bottom: 1px solid var(--gray);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  gap: 60px;
+}
+
+.btnInner {
+  display: flex;
+  gap: 30px;
+}
+
+.burger {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+
+.burgerLine {
+  height: 2px;
+  width: 80%;
+  border-radius: 2px;
+  background-color: var(--darkGray);
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 80%;
+  border-radius: 2px;
+  background-color: var(--darkGray);
+}
+.burger::before {
+  top: 0;
+}
+.burger::after {
+  bottom: 0;
+}
+
+.bottomSection .list {
+  display: none;
+}
+
+.topSection .list {
+  display: none;
+}
+
+@media (min-width: 510px) {
+  .topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 33px;
+  }
+
+  .logoContainer {
+    justify-content: flex-start;
+    border-bottom: none;
+  }
+
+  .btnContainer {
+    justify-content: flex-end;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .bottomSection .list {
+    display: flex;
+    padding: 18px 33px;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    border-bottom: 1px solid var(--gray);
+  }
+
+  .bottomSection .list a {
+    color: var(--darkGray);
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 690px) {
+  .bottomSection .list {
+    padding: 20px 37px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .bottomSection .list {
+    display: none;
+  }
+
+  .topSection {
+    padding: 0 150px;
+  }
+
+  .topSection .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+  }
+
+  .topSection .list a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--darkGray);
+    /* transition: all 0.4s ease; */
+  }
+
+  .topSection .list a:hover {
+    /* transform: scale(1.05); */
+    color: var(--purple);
+  }
+}

@@ -1,0 +1,30 @@
+:root {
+  --gray: #dddddd;
+  --darkGray: #4c5866;
+  --lightGray: #85859b;
+  --purple: #7875fe;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 400;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
